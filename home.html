@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="en" name="description" content="JSON Indent helps developers to indent and validate JSON data and get it in readable format for debugging purpose."/>
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="JSON Indent">
+    <meta name="keywords" content="json formatter, json validator, online json formatter, json formatter online,json beautifier, json beautify, jsonlint,JSON Checker,format json, json format ,format json online" />
+    <link rel="canonical" href="https://json-indent.com" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="JSON Indent" />
+    <meta name="twitter:description" content="Indent and validate JSON data and get it in readable format for debugging purpose." />
+    <meta name="twitter:image" content="https://json-indent.com/img/title.png" />
+    <meta name="twitter:url" content="https://json-indent.com">
+
+    <meta property="og:title" content="JSON Indent" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://json-indent.com" />
+    <meta property="og:image" content="https://json-indent.com/img/title.png" />
+    <meta property="og:description" content="Indent and validate JSON data and get it in readable format for debugging purpose." />
+
+    <title>JSON Indent - Home</title>
+    <link rel="icon" href="img/icon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <link rel="stylesheet" type="text/css" href="css/open-iconic-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/jsonindent.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120239931-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-120239931-1');
+    </script>
+
+
+</head>
+<body>
+<div class="container navbar-manual">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-white border-bottom">
+    <div class="container">
+        <a class="navbar-brand text-dark" href="#"><img src="img/title.png" height="35"></a>
+        <button class="navbar-toggler navbar-toggler-right bg-secondary"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item text-dark">
+                    <a class="nav-link text-dark" href="#learnJSON">Learn JSON</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#about">About</a>
+                </li>
+                <li class="nav-item text-dark">
+                    <a class="nav-link text-dark" href="#support">Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</div>
+<div class="py-3 text-white bg-secondary jsoneditor-manual">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-md-6">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light editor-navbar-manual">
+                        <span class="navbar-brand mb-0 h1 text-secondary">Input JSON</span>
+                    <button type="button" class="btn-sm btn-light" id="clearButton" style="outline: none" data-toggle="tooltip" data-placement="bottom" title="Clear Input" >Clear <span class="oi oi-x"></span></button>
+                </nav>
+                <div id="input" class="card w-100 editor-manual" style="border-radius: 0%"></div>
+            </div>
+            <div class="col-md-6">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light editor-navbar-manual">
+                        <span class="navbar-brand mb-0 h1 text-secondary">Indented JSON</span>
+                        <div class="btn-group" role="group" aria-label="Button group with nested dropdown" id="buttonGroup" >
+                            <div class="btn-group">
+                                <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-toggle="tooltip" data-placement="bottom" title="Spacing">
+                                    Space Tab
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">2 Space Tab</a>
+                                    <a class="dropdown-item" href="#">3 Space Tab</a>
+                                    <a class="dropdown-item" href="#">4 Space Tab</a>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-light" id="clipboardButton" data-toggle="tooltip" data-placement="bottom" title="Copy" data-animation="true">
+                                <span class="oi oi-clipboard"></span>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-light" id="saveButton" data-toggle="tooltip" data-placement="bottom" title="Save">
+                                <span class="oi oi-data-transfer-download"></span>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-light" id="printButton" data-toggle="tooltip" data-placement="bottom" title="Print">
+                                <span class="oi oi-print"></span>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-light" id="newWindowButton" data-toggle="tooltip" data-placement="bottom" title="Full Screen">
+                                <span class="oi oi-fullscreen-enter"></span>
+                            </button>
+                        </div>
+                </nav>
+                <div id="output" class="card w-100 editor-manual" style="border-radius: 0%"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="py-5 bg-light" id="learnJSON">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <h1 class="mb-4 text-secondary">JSON !</h1>
+                <p class="lead">JSON or JavaScript Object Notation is a lightweight text-based open standard designed for human-readable data interchange.
+                    <br>The JSON format was originally specified by Douglas Crockford, and is described in RFC 4627.</p>
+                <div class="row text-left mt-5">
+                    <div class="col-md-4 my-3">
+                        <div class="row mb-3">
+                            <div class="align-self-center col-10 col-md-12">
+                                <h5 class="text-secondary">
+                                    <b>What is it?</b>
+                                </h5>
+                            </div>
+                        </div>
+                        <p>JSON is a schema-less, text-based representation of structured data that is based on key-value pairs and ordered lists.</p>
+                    </div>
+                    <div class="col-md-4 my-3">
+                        <div class="row mb-3">
+                            <div class="align-self-center col-10 col-md-12">
+                                <h5 class="text-secondary">
+                                    <b>Why should we use JSON?</b>
+                                </h5>
+                            </div>
+                        </div>
+                        <p>JSON is light weight, faster and standard for exchanging data between web and mobile clients and back-end services.</p>
+                    </div>
+                    <div class="col-md-4 my-3">
+                        <div class="row mb-3">
+                            <div class="align-self-center col-10 col-md-12">
+                                <h5 class="text-secondary" >
+                                    <b>When to use JSON?</b>
+                                </h5>
+                            </div>
+                        </div>
+                        <p>For software that communicates with a browser or native mobile application, use JSON as the data format.</p>
+                    </div>
+                    <div class="col-md-4 my-3">
+                        <div class="row mb-3">
+                            <div class="align-self-center col-10 col-md-12">
+                                <h5 class="text-secondary">
+                                    <b>JSON versus XML</b>
+                                </h5>
+                            </div>
+                        </div>
+                        <p>JSON is less Verbose and faster than XML. It is straightforward and readable. It uses a map data structure rather than XML's tree.</p>
+                    </div>
+                    <div class="col-md-4 my-3">
+                        <div class="row mb-3">
+                            <div class="align-self-center col-10 col-md-12">
+                                <h5 class="text-secondary">
+                                    <b>Limitations of JSON</b>
+                                </h5>
+                            </div>
+                        </div>
+                        <p>No schema, Only one number type, No date type, No support for comments.</p>
+                    </div>
+                    <div class="col-md-4 my-3">
+                        <div class="row mb-3">
+                            <div class="align-self-center col-10 col-md-12">
+                                <h5 class="text-secondary">
+                                    <b>Useful Resources</b>
+                                </h5>
+                            </div>
+                        </div>
+                        <p>
+                            <ul class="list-unstyled">
+                                <a class="text-secondary" href="http://json.org/"><span class="oi oi-external-link"></span>&nbsp;&nbsp;json.org/</a>
+                                <br>
+                                <a class="text-secondary" href="https://en.wikipedia.org/wiki/JSON"><span class="oi oi-external-link"></span>&nbsp;&nbsp;Wikipedia - JSON</a>
+                                <br>
+                                <a class="text-secondary" href="https://www.w3schools.com/js/js_json_intro.asp"><span class="oi oi-external-link"></span>&nbsp;&nbsp;w3schools.com</a>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<div class="py-5 text-center bg-white" id="about">
+    <div class="container py-5 px-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="display-3 mb-4 text-secondary">JSON Indent</h1>
+                <p class="lead mb-5">The JSON Indent is by product of a Software Engineer’s weekend programming and aimed to help developers with JSON formatting.
+                    <br>Debugging with unformatted JSON data is always pain, especially with those large JSON payloads without line breaks.</p>
+                <p class="lead mb-5">This tool is to help developers to indent and validate JSON data and get it in readable format for debugging purpose.
+                <br>How to use it? Simple, just copy and paste or directly type in the editor above and get the formatted JSON.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pt-5 text-center text-white bg-secondary" id="support">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="display-3 mb-4 ">Support</h1>
+                <p class="lead mb-5">Though JSON Indent is by product of a Software Engineer’s weekend programming to help developers with JSON formatting.
+                    <br><b>BUT</b> we are not stopping here. We are extending this tool to support <a class="text-white" href="https://www.w3.org/XML/">XML</a> and <a class="text-white" href="https://graphql.org/">GraphQL</a>.</p>
+                <p class="lead mb-5">So if you wish, you can contribute and support this project grow.</p>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="AUEEWJTRZ5TYY">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+                <br>
+                <p class="lead mb-5">Thanks to all who have already contributed. Your support is very much appreciated.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="py-5 text-white bg-light" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-md-left text-center align-self-center my-5">
+                <p class="text-dark">Thanks for using JSON Indent. Please let us know, if you have any suggestions for us.</p>
+                <p class="text-dark">Your feedback help us to improve the tool and overall experience.</p>
+                <p class="text-dark">If you have ask for any new feature, please let us know. Thank you.</p>
+            </div>
+            <div class="col-md-6">
+                <h1 class="text-dark">Contact us</h1>
+                <p class="text-dark">We would love to hear from you</p>
+                <form class="text-dark needs-validation" id="feedbackForm">
+                    <div class="messages"></div>
+                    <div class="form-group" >
+                        <label for="inputName">Your name</label>
+                        <input type="text" required class="form-control" id="inputName" placeholder="Your name" autocomplete="section-blue name"> </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Email address</label>
+                        <input type="email" required class="form-control" id="inputEmail" placeholder="Enter email" autocomplete="section-blue email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback">Write here</label>
+                        <textarea class="form-control" required id="feedback" rows="3" placeholder="Type here"></textarea>
+                    </div>
+                    <button type="button" id="submitButton" class="btn btn-secondary">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-dark text-white">
+    <div class="container">
+        <div class="row">
+            <div class="p-4 col-md-4">
+                <h2 class="mb-4 text-secondary">JSON Indent</h2>
+                <p class="text-white">A tool help developers to indent and validate JSON data.</p>
+            </div>
+            <div class="p-4 col-md-4">
+                <h2 class="mb-4 text-secondary">Mapsite</h2>
+                <ul class="list-unstyled">
+                    <a href="#" class="text-white">Home</a>
+                    <br>
+                    <a href="#about" class="text-white">About us</a>
+                    <br>
+                    <a href="#support" class="text-white">Support</a>
+                    <br>
+                    <a href="#contact" class="text-white">Contact</a>
+                </ul>
+            </div>
+            <div class="p-4 col-md-4">
+                <h2 class="mb-4">Contact</h2>
+                <p>
+                    <a href="mailto:info@pingendo.com" class="text-white">
+                        <i class="fa d-inline mr-3 text-secondary fa-envelope-o"></i>contact@json-indent.com</a>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <p class="text-center text-white">
+                    <a class="text-white" href="#">© Copyright 2018 JSON Indent - All rights reserved.</a>
+                    |
+                    <a class="text-white" href="privacy.html">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jsonlint.min.js"></script>
+<script src="js/ace.min.js"></script>
+<script src="js/FileSaver.min.js"></script>
+<script src="js/jsonIndentmin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+.navbar-brand {
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+.btn-sm{
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+.jsoneditor-manual {
+    height: 92%;
+}
+
+
+.navbar-manual {
+    height: 8%;
+}
+
+.editor-navbar-manual {
+    height: 5%;
+    justify-content: space-between;
+}
+
+.editor-manual {
+    height: 95%;
+}
