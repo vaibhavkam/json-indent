@@ -1,0 +1,3 @@
+User-Agent: *
+Disallow:
+Sitemap: https://json-indent.com/sitemap.xml
