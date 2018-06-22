@@ -23,10 +23,7 @@
     <link rel="icon" href="img/icon.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/theme.min.css">
-    <link rel="stylesheet" type="text/css" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/jsonindent.min.css">
+    <link rel="stylesheet" type="text/css" href="css/json-indent-main.min.css">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120239931-1"></script>
@@ -70,18 +67,18 @@
 <div class="py-3 text-white bg-secondary jsoneditor-manual">
     <div class="container-fluid h-100">
         <div class="row h-100">
-            <div class="col-md-6">
+            <div class="col-md-6 py-2">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light editor-navbar-manual">
                         <span class="navbar-brand mb-0 h1 text-secondary">Input JSON</span>
                     <button type="button" class="btn-sm btn-light" id="clearButton" style="outline: none" data-toggle="tooltip" data-placement="bottom" title="Clear Input" >Clear <span class="oi oi-x"></span></button>
                 </nav>
                 <div id="input" class="card w-100 editor-manual" style="border-radius: 0%"></div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 py-2">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light editor-navbar-manual">
                         <span class="navbar-brand mb-0 h1 text-secondary">Indented JSON</span>
                         <div class="btn-group" role="group" aria-label="Button group with nested dropdown" id="buttonGroup" >
-                            <div class="btn-group">
+                            <div class="btn-group d-none d-sm-block">
                                 <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-toggle="tooltip" data-placement="bottom" title="Spacing">
                                     Space Tab
                                 </button>
@@ -306,5 +303,4 @@
 <script src="js/FileSaver.min.js"></script>
 <script src="js/jsonIndentmin.js"></script>
 </body>
-
 </html>
